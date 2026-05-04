@@ -1,0 +1,136 @@
+/* ===== USER SESSION STATES ===== */
+/* Logged in user avatar indicator */
+.user-avatar-logged-in {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-avatar-logged-in::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: #7A9E7E;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+/* User logged in button - green/sage accent */
+.btn-user-logged-in {
+    background: linear-gradient(135deg, #7A9E7E, #5A8A5E);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 9px 16px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    box-shadow: 0 4px 16px rgba(122,158,126,0.4);
+}
+
+.btn-user-logged-in:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(122,158,126,0.5);
+    color: white;
+}
+
+/* Logout button - appears next to user name */
+.btn-logout {
+    background: transparent;
+    color: #5C3D28;
+    border: 1.5px solid #F2D5B0;
+    border-radius: 10px;
+    padding: 9px 14px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-logout:hover {
+    background: #E84A2A;
+    border-color: #E84A2A;
+    color: white;
+}
+
+/* Login/Register prompt button for guests */
+.btn-login-prompt {
+    background: linear-gradient(135deg, #E8922A, #C4751A);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    box-shadow: 0 4px 20px rgba(232,146,42,0.4);
+    animation: pulse-login 2s ease-in-out infinite;
+}
+
+.btn-login-prompt:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(232,146,42,0.5);
+    color: white;
+    animation: none;
+}
+
+@keyframes pulse-login {
+    0%, 100% { box-shadow: 0 4px 20px rgba(232,146,42,0.4); }
+    50% { box-shadow: 0 4px 28px rgba(232,146,42,0.6); }
+}
+
+/* Dropdown header styles */
+.dropdown-header {
+    padding: 0.5rem 1rem;
+}
+
+.dropdown-header small {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #9E7B5E;
+}
+
+.dropdown-header strong {
+    font-size: 0.9rem;
+    color: #7A9E7E;
+}
+
+/* Session indicator */
+.session-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-left: 8px;
+}
+
+.session-indicator.logged-in {
+    background: rgba(122,158,126,0.15);
+    color: #7A9E7E;
+}
+
+.session-indicator.guest {
+    background: rgba(232,146,42,0.1);
+    color: #9E7B5E;
+}
